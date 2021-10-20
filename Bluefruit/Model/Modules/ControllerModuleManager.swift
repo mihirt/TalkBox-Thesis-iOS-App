@@ -125,7 +125,12 @@ class ControllerModuleManager: NSObject {
         var crcData = data
         crcData.appendCrc()
 
-        uartManager.send(blePeripheral: blePeripheral, data: crcData)
+        uartManager.send(blePeripheral: blePeripheral, data: crcData, completion: completion)
+        print("sent!")
+    }
+    
+    func completion(e: Error?) {
+        print(e)
     }
 
     // MARK: - Uart Data Cache

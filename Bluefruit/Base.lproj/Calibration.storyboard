@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Magnetometer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MagnetometerViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MagnetometerViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="417" width="375" height="230"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCf-Tn-1rW">
-                                        <rect key="frame" x="-20" y="60" width="84" height="70"/>
+                                        <rect key="frame" x="-20" y="72" width="60" height="46"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="contentEdgeInsets" minX="18" minY="11" maxX="18" maxY="11"/>
                                         <state key="normal" image="ic_chevron_left">
@@ -41,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSY-k8-QiJ">
-                                        <rect key="frame" x="311" y="60" width="84" height="70"/>
+                                        <rect key="frame" x="335" y="72" width="60" height="46"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="contentEdgeInsets" minX="18" minY="11" maxX="18" maxY="11"/>
                                         <state key="normal" image="ic_chevron_right">
@@ -92,7 +91,7 @@
         <!--Gyroscope-->
         <scene sceneID="wau-H0-ftQ">
             <objects>
-                <viewController id="dFn-t5-44y" customClass="GyroscopeViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dFn-t5-44y" customClass="GyroscopeViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9vB-Dh-LsP"/>
                         <viewControllerLayoutGuide type="bottom" id="xF2-eL-YIW"/>
@@ -112,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="437" width="375" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-cX-ri4">
-                                        <rect key="frame" x="-20" y="50" width="84" height="70"/>
+                                        <rect key="frame" x="-20" y="62" width="60" height="46"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="contentEdgeInsets" minX="18" minY="11" maxX="18" maxY="11"/>
                                         <state key="normal" image="ic_chevron_left">
@@ -123,7 +122,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd8-ZZ-SCz">
-                                        <rect key="frame" x="311" y="50" width="84" height="70"/>
+                                        <rect key="frame" x="335" y="62" width="60" height="46"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="contentEdgeInsets" minX="18" minY="11" maxX="18" maxY="11"/>
                                         <state key="normal" image="ic_chevron_right">
@@ -174,7 +173,7 @@
         <!--3D Visualization-->
         <scene sceneID="Zcm-DX-WgI">
             <objects>
-                <viewController storyboardIdentifier="VisualizationViewController" id="t9N-Kw-iyd" customClass="VisualizationViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisualizationViewController" id="t9N-Kw-iyd" customClass="VisualizationViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giU-3m-R6O"/>
                         <viewControllerLayoutGuide type="bottom" id="Oqs-b7-e61"/>
@@ -235,7 +234,7 @@
         <!--Magnetometer Progress View Controller-->
         <scene sceneID="z7z-4d-nSl">
             <objects>
-                <viewController storyboardIdentifier="MagnetometerProgress2ViewController" id="Z4d-nG-eP6" customClass="MagnetometerProgressViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MagnetometerProgress2ViewController" id="Z4d-nG-eP6" customClass="MagnetometerProgressViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ev6-M3-TTv"/>
                         <viewControllerLayoutGuide type="bottom" id="M2e-NF-2IC"/>
@@ -254,28 +253,28 @@
                                 <rect key="frame" x="16" y="0.0" width="343" height="190"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calibrating..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCe-wJ-xjf">
-                                        <rect key="frame" x="16" y="12" width="97" height="20.5"/>
+                                        <rect key="frame" x="16" y="12" width="96.5" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-5b-m3O">
-                                        <rect key="frame" x="308" y="15.5" width="19" height="16"/>
+                                        <rect key="frame" x="306.5" y="15.5" width="20.5" height="16"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-eF-JZA">
-                                        <rect key="frame" x="16" y="38.5" width="311" height="2"/>
+                                        <rect key="frame" x="16" y="38.5" width="311" height="4"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Rotate the board along the 3 axis until enough samples are collected for the Magnetometer calibration" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZT-Gt-hYk">
-                                        <rect key="frame" x="16" y="52.5" width="311" height="52"/>
+                                        <rect key="frame" x="16" y="54.5" width="311" height="52"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Rn-mM-AmT">
-                                        <rect key="frame" x="16" y="52.5" width="311" height="76"/>
+                                        <rect key="frame" x="16" y="54.5" width="311" height="76"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-6W-vRX">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="16"/>
@@ -290,13 +289,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" verticalHuggingPriority="1000" text="(target &lt;4%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-f6-89F">
-                                                        <rect key="frame" x="68" y="0.0" width="216" height="16"/>
+                                                        <rect key="frame" x="68" y="0.0" width="214.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDg-Tc-phy">
-                                                        <rect key="frame" x="292" y="0.0" width="19" height="16"/>
+                                                        <rect key="frame" x="290.5" y="0.0" width="20.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -327,13 +326,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" verticalHuggingPriority="1000" text="(target &lt;4%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGb-2m-obQ">
-                                                        <rect key="frame" x="68" y="0.0" width="216" height="16"/>
+                                                        <rect key="frame" x="68" y="0.0" width="214.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-C7-9yl">
-                                                        <rect key="frame" x="292" y="0.0" width="19" height="16"/>
+                                                        <rect key="frame" x="290.5" y="0.0" width="20.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -364,13 +363,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" verticalHuggingPriority="1000" text="(target &lt;4%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSn-kr-IFT">
-                                                        <rect key="frame" x="68" y="0.0" width="216" height="16"/>
+                                                        <rect key="frame" x="68" y="0.0" width="214.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-ms-zVx">
-                                                        <rect key="frame" x="292" y="0.0" width="19" height="16"/>
+                                                        <rect key="frame" x="290.5" y="0.0" width="20.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -401,13 +400,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" verticalHuggingPriority="1000" text="(target &lt;4%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-yB-GxX">
-                                                        <rect key="frame" x="68" y="0.0" width="216" height="16"/>
+                                                        <rect key="frame" x="68" y="0.0" width="214.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4F-uQ-Ojc">
-                                                        <rect key="frame" x="292" y="0.0" width="19" height="16"/>
+                                                        <rect key="frame" x="290.5" y="0.0" width="20.5" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -427,7 +426,7 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EZ-Kh-fFH" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EZ-Kh-fFH" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                         <rect key="frame" x="126.5" y="140" width="90" height="38"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                         <state key="normal" title="Restart"/>
@@ -436,7 +435,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeT-Tu-ys0">
-                                        <rect key="frame" x="295.5" y="1.5" width="44" height="44"/>
+                                        <rect key="frame" x="295" y="1.5" width="44" height="44"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="ic_settings"/>
                                         <connections>
@@ -499,7 +498,7 @@
         <!--Gyroscope Progress View Controller-->
         <scene sceneID="qX2-72-7cA">
             <objects>
-                <viewController storyboardIdentifier="GyroscopeProgressViewController" id="zYJ-Jq-1Kw" customClass="GyroscopeProgressViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GyroscopeProgressViewController" id="zYJ-Jq-1Kw" customClass="GyroscopeProgressViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sA3-cZ-f1j"/>
                         <viewControllerLayoutGuide type="bottom" id="RxT-w9-YxZ"/>
@@ -524,15 +523,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE6-0x-qt1">
-                                        <rect key="frame" x="308" y="16" width="19" height="16"/>
+                                        <rect key="frame" x="306.5" y="16" width="20.5" height="16"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sb9-RC-qbx">
-                                        <rect key="frame" x="16" y="39" width="311" height="2"/>
+                                        <rect key="frame" x="16" y="39" width="311" height="4"/>
                                     </progressView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-EJ-yTm" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-EJ-yTm" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                         <rect key="frame" x="126.5" y="120" width="90" height="38"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                         <state key="normal" title="Restart"/>
@@ -541,13 +540,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Pose the board on a surface and wait until the resting orientation is detected" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-Mu-k5A">
-                                        <rect key="frame" x="16" y="53" width="311" height="34"/>
+                                        <rect key="frame" x="16" y="55" width="311" height="34"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BU-GA-KtX">
-                                        <rect key="frame" x="295.5" y="2" width="44" height="44"/>
+                                        <rect key="frame" x="295" y="2" width="44" height="44"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="ic_settings"/>
                                         <connections>
@@ -605,7 +604,7 @@
         <!--Visualization Progress View Controller-->
         <scene sceneID="b5K-qG-FZ5">
             <objects>
-                <viewController storyboardIdentifier="VisualizationProgressViewController" id="baz-Ys-oTf" customClass="VisualizationProgressViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisualizationProgressViewController" id="baz-Ys-oTf" customClass="VisualizationProgressViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1D-gL-kMs"/>
                         <viewControllerLayoutGuide type="bottom" id="8cT-e5-K6G"/>
@@ -624,19 +623,19 @@
                                 <rect key="frame" x="16" y="0.0" width="343" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Visualization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvn-vv-h3I">
-                                        <rect key="frame" x="16" y="12" width="271.5" height="20.5"/>
+                                        <rect key="frame" x="16" y="12" width="271" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-Pl-WQT">
-                                        <rect key="frame" x="308" y="15.5" width="19" height="16"/>
+                                        <rect key="frame" x="306.5" y="15.5" width="20.5" height="16"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-Jb-dgx">
-                                        <rect key="frame" x="295.5" y="1.5" width="44" height="44"/>
+                                        <rect key="frame" x="295" y="1.5" width="44" height="44"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="ic_settings"/>
                                         <connections>
@@ -708,7 +707,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j8t-fi-XkT">
-                                        <rect key="frame" x="196" y="72.5" width="11" height="64"/>
+                                        <rect key="frame" x="196.5" y="72.5" width="11" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="x:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFc-TS-lHy">
                                                 <rect key="frame" x="0.0" y="0.0" width="11" height="16"/>
@@ -731,7 +730,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-d6-qlu">
-                                        <rect key="frame" x="215" y="72.5" width="50" height="64"/>
+                                        <rect key="frame" x="215.5" y="72.5" width="50" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="-300.33" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxB-ZF-ctj">
                                                 <rect key="frame" x="0.5" y="0.0" width="49.5" height="16"/>
@@ -757,22 +756,22 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-P7-Izx">
-                                        <rect key="frame" x="269" y="72.5" width="4.5" height="64"/>
+                                        <rect key="frame" x="269.5" y="72.5" width="4" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dio-th-VF1">
-                                                <rect key="frame" x="0.0" y="0.0" width="4.5" height="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="4" height="16"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfT-fa-edO">
-                                                <rect key="frame" x="0.0" y="24" width="4.5" height="16"/>
+                                                <rect key="frame" x="0.0" y="24" width="4" height="16"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZM-Vv-8pm">
-                                                <rect key="frame" x="0.0" y="48" width="4.5" height="16"/>
+                                                <rect key="frame" x="0.0" y="48" width="4" height="16"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -805,7 +804,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J28-JS-lLs">
                                         <rect key="frame" x="44.5" y="154" width="254" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5X-RI-XoA" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5X-RI-XoA" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Set Origin"/>
@@ -813,7 +812,7 @@
                                                     <action selector="onClickSetOrigin:" destination="baz-Ys-oTf" eventType="touchUpInside" id="6uE-0Y-rKG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2S-3P-34o" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2S-3P-34o" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="129" y="0.0" width="125" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Reset Origin"/>
@@ -885,7 +884,7 @@
         <!--Calibration-->
         <scene sceneID="U4U-0a-o03">
             <objects>
-                <viewController storyboardIdentifier="CalibrationMenuViewController" id="t6Z-sV-kAm" customClass="CalibrationMenuViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalibrationMenuViewController" id="t6Z-sV-kAm" customClass="CalibrationMenuViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O03-Ro-9Le"/>
                         <viewControllerLayoutGuide type="bottom" id="tMs-vb-QZz"/>
@@ -907,7 +906,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZWq-1e-jun">
                                         <rect key="frame" x="47.5" y="10" width="280" height="166"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVM-dI-hOq" customClass="StyledLinkedButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVM-dI-hOq" customClass="StyledLinkedButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="42"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
@@ -920,7 +919,7 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="g5H-YC-veD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qa-Zr-SVV" customClass="StyledLinkedButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qa-Zr-SVV" customClass="StyledLinkedButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="280" height="42"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
@@ -932,7 +931,7 @@
                                                     <segue destination="dFn-t5-44y" kind="show" id="e7F-F1-L7Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-F6-KsR" customClass="StyledLinkedButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-F6-KsR" customClass="StyledLinkedButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="124" width="280" height="42"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
@@ -1023,7 +1022,7 @@
         <!--Sensor Selection-->
         <scene sceneID="wQO-jr-kn4">
             <objects>
-                <viewController id="fhH-J9-Ykc" customClass="SensorConfigViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fhH-J9-Ykc" customClass="SensorConfigViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8IN-Qh-99i"/>
                         <viewControllerLayoutGuide type="bottom" id="gsV-uq-w1b"/>
@@ -1068,7 +1067,7 @@
         <!--Magnetometer Page Matrix View Controller-->
         <scene sceneID="Wkc-ey-zBH">
             <objects>
-                <viewController storyboardIdentifier="MagnetometerPageMatrixViewController" id="ZW0-9R-Cs2" customClass="MagnetometerPageMatrixViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MagnetometerPageMatrixViewController" id="ZW0-9R-Cs2" customClass="MagnetometerPageMatrixViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cHb-xq-8c3"/>
                         <viewControllerLayoutGuide type="bottom" id="qLd-ed-3Jo"/>
@@ -1087,43 +1086,43 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="( 0.00  0.00  0.00 )" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-0A-q4F">
-                                        <rect key="frame" x="147" y="12" width="180" height="20.5"/>
+                                        <rect key="frame" x="146.5" y="12" width="180.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Magnetic Offset" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-1c-ect">
-                                        <rect key="frame" x="16" y="12" width="123" height="20.5"/>
+                                        <rect key="frame" x="16" y="12" width="122.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVK-bc-Ogg">
-                                        <rect key="frame" x="74.5" y="37" width="26" height="113.5"/>
+                                        <rect key="frame" x="76" y="37" width="26" height="113.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="95"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Ik4-Jc-MPc">
-                                        <rect key="frame" x="100.5" y="61" width="206.5" height="73.5"/>
+                                        <rect key="frame" x="102" y="61" width="205" height="73.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-yF-ut9">
-                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIX-WL-el4">
-                                                        <rect key="frame" x="0.0" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJM-54-gq2">
-                                                        <rect key="frame" x="75.5" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="75" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aK-Fe-hnX">
-                                                        <rect key="frame" x="151" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="150" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1131,22 +1130,22 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2QP-42-0As">
-                                                <rect key="frame" x="0.0" y="24.5" width="206.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="205" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-77-CTm">
-                                                        <rect key="frame" x="0.0" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrE-Yh-jed">
-                                                        <rect key="frame" x="75.5" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="75" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irg-Pg-DxA">
-                                                        <rect key="frame" x="151" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="150" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1154,22 +1153,22 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-pY-b24">
-                                                <rect key="frame" x="0.0" y="49" width="206.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="49" width="205" height="24.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHd-sb-qGo">
-                                                        <rect key="frame" x="0.0" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-o1-BRA">
-                                                        <rect key="frame" x="75.5" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="75" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN1-QB-0Lf">
-                                                        <rect key="frame" x="151" y="2" width="55.5" height="20.5"/>
+                                                        <rect key="frame" x="150" y="2" width="55" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -1185,13 +1184,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Magnetic Field" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y94-Vw-GBA">
-                                        <rect key="frame" x="16" y="144.5" width="112" height="20.5"/>
+                                        <rect key="frame" x="16" y="144.5" width="111.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="+0.000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jZ-cl-sAl">
-                                        <rect key="frame" x="136" y="144.5" width="191" height="20.5"/>
+                                        <rect key="frame" x="135.5" y="144.5" width="191.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1248,7 +1247,7 @@
         <!--Gyroscope Page Data View Controller-->
         <scene sceneID="lMa-ts-YBi">
             <objects>
-                <viewController storyboardIdentifier="GyroscopePageDataViewController" id="wdz-43-SnN" customClass="GyroscopePageDataViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GyroscopePageDataViewController" id="wdz-43-SnN" customClass="GyroscopePageDataViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYB-Oe-NKt"/>
                         <viewControllerLayoutGuide type="bottom" id="uu1-fF-GDb"/>
@@ -1322,7 +1321,7 @@
         <!--Magnetometer Parameters View Controller-->
         <scene sceneID="i45-Dc-xW9">
             <objects>
-                <viewController storyboardIdentifier="MagnetometerParametersViewController" id="5h2-pf-LqU" customClass="MagnetometerParametersViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MagnetometerParametersViewController" id="5h2-pf-LqU" customClass="MagnetometerParametersViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e2R-LO-WM3"/>
                         <viewControllerLayoutGuide type="bottom" id="1zJ-sR-8Hj"/>
@@ -1337,7 +1336,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pMq-N0-A7e">
                                         <rect key="frame" x="44" y="144" width="255" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKg-bB-bxk" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKg-bB-bxk" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Reset to Defaults"/>
@@ -1345,7 +1344,7 @@
                                                     <action selector="onClickSetDefaults:" destination="5h2-pf-LqU" eventType="touchUpInside" id="m49-la-KAj"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-bq-xVf" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-bq-xVf" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="178" y="0.0" width="77" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Done"/>
@@ -1510,7 +1509,7 @@
         <!--Gyroscope Parameters View Controller-->
         <scene sceneID="GNx-4K-vgo">
             <objects>
-                <viewController storyboardIdentifier="GyroscopeParametersViewController" id="F9u-iY-4sA" customClass="GyroscopeParametersViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GyroscopeParametersViewController" id="F9u-iY-4sA" customClass="GyroscopeParametersViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xhk-xU-30h"/>
                         <viewControllerLayoutGuide type="bottom" id="zxg-Zg-Z0E"/>
@@ -1525,7 +1524,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y4d-Dr-Wtf">
                                         <rect key="frame" x="44" y="124" width="255" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlO-f4-VNW" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlO-f4-VNW" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Reset to Defaults"/>
@@ -1533,7 +1532,7 @@
                                                     <action selector="onClickSetDefaults:" destination="F9u-iY-4sA" eventType="touchUpInside" id="qpd-Vq-nw5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNs-S8-6uY" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNs-S8-6uY" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                                 <rect key="frame" x="178" y="0.0" width="77" height="38"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                                 <state key="normal" title="Done"/>
@@ -1640,7 +1639,7 @@
         <!--Visualization Parameters View Controller-->
         <scene sceneID="9m6-AP-S1Z">
             <objects>
-                <viewController storyboardIdentifier="VisualizationParametersViewController" id="FPP-9f-EL6" customClass="VisualizationParametersViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisualizationParametersViewController" id="FPP-9f-EL6" customClass="VisualizationParametersViewController" customModule="Bluefruit_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XkE-Rg-zRt"/>
                         <viewControllerLayoutGuide type="bottom" id="nWb-Z5-Vtw"/>
@@ -1794,7 +1793,7 @@
                                                 <rect key="frame" x="0.0" y="111" width="311" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Switch Y-Z" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRj-ZA-3jI">
-                                                        <rect key="frame" x="74.5" y="7.5" width="66.5" height="16"/>
+                                                        <rect key="frame" x="75" y="7.5" width="66" height="16"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1820,7 +1819,7 @@
                                             <constraint firstItem="Ewr-vY-rfc" firstAttribute="centerX" secondItem="LdW-pM-E7T" secondAttribute="centerX" id="AoL-sa-zac"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH1-n3-eO8" customClass="StyledButton" customModule="iOS" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH1-n3-eO8" customClass="StyledButton" customModule="Bluefruit_Connect" customModuleProvider="target">
                                         <rect key="frame" x="133" y="164" width="77" height="38"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
                                         <state key="normal" title="Done"/>
@@ -1860,6 +1859,17 @@
             <point key="canvasLocation" x="3652" y="1249"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1Qa-Zr-SVV">
+            <size key="intrinsicContentSize" width="207" height="42"/>
+        </designable>
+        <designable name="2Nd-F6-KsR">
+            <size key="intrinsicContentSize" width="157" height="42"/>
+        </designable>
+        <designable name="qVM-dI-hOq">
+            <size key="intrinsicContentSize" width="238" height="42"/>
+        </designable>
+    </designables>
     <resources>
         <image name="blueprint_background_gray" width="853" height="533"/>
         <image name="ic_chevron_left" width="24" height="24"/>

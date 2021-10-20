@@ -218,6 +218,8 @@
 		A9D2342E1E3AD64500DC0C99 /* GattUUIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9D234251E3AD64500DC0C99 /* GattUUIDs.plist */; };
 		A9D2344D1E3AD97600DC0C99 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2344C1E3AD97600DC0C99 /* StyleConfig.swift */; };
 		A9F4E1BD1F04467200BF8A70 /* ISColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BBB968B727172DE100218CA1 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB968B627172DE100218CA1 /* libxml2.2.tbd */; };
+		BBB968CE2717CD9D00218CA1 /* TalkBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -617,6 +619,8 @@
 		A9D2344C1E3AD97600DC0C99 /* StyleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		A9F4E1BA1F04467200BF8A70 /* ISColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISColorWheel.h; sourceTree = "<group>"; };
 		A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISColorWheel.m; sourceTree = "<group>"; };
+		BBB968B627172DE100218CA1 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkBoxViewController.swift; sourceTree = "<group>"; };
 		DE511F22E8F88E565DA29F57 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -625,6 +629,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB968B727172DE100218CA1 /* libxml2.2.tbd in Frameworks */,
 				81EC9BF2053F63FF4DD121AC /* Pods_Bluefruit.framework in Frameworks */,
 				A96D5FDE23CC7E79009FB3C7 /* libMagickCore.a in Frameworks */,
 				A96D5FDF23CC7E79009FB3C7 /* libMagickWand.a in Frameworks */,
@@ -668,6 +673,7 @@
 		898E6F8F0FE679F1B515A766 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBB968B627172DE100218CA1 /* libxml2.2.tbd */,
 				A96D5FE223CC8375009FB3C7 /* libz.tbd */,
 				A96D5FE023CC8344009FB3C7 /* libxml2.tbd */,
 				A945EA6A1E4DF3CA00737BB0 /* libz.tbd */,
@@ -1257,6 +1263,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B06A2423D0D0750060A64C /* ControllerPadViewController.swift */,
+				BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */,
 				A9B06A2523D0D0750060A64C /* ControllerSensorTableViewCell.swift */,
 				A9B06A2623D0D0750060A64C /* ControllerColorWheelViewController.swift */,
 				A9B06A2723D0D0750060A64C /* ControllerComponentsTableViewCell.swift */,
@@ -1548,7 +1555,6 @@
 				TargetAttributes = {
 					A9286C951E3A9216008E5F81 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1559,13 +1565,11 @@
 					};
 					A9BCD5991E4D2761003D1CEA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A9BCD5A51E4D2761003D1CEA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -1721,6 +1725,7 @@
 				A9F4E1BD1F04467200BF8A70 /* ISColorWheel.m in Sources */,
 				A9B06A9123D0D0750060A64C /* ControllerPadViewController.swift in Sources */,
 				A9B06AB123D0D0750060A64C /* MqttSettingsStatusCell.swift in Sources */,
+				BBB968CE2717CD9D00218CA1 /* TalkBoxViewController.swift in Sources */,
 				A9B06AAB23D0D0750060A64C /* UartBaseViewController.swift in Sources */,
 				A9B06A6E23D0D0750060A64C /* SensorConfigViewController.swift in Sources */,
 				A93DE7751F36195900B2EB5D /* GattServer.swift in Sources */,
@@ -2079,8 +2084,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bluefruit/Bluefruit.entitlements;
 				CURRENT_PROJECT_VERSION = 51;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2115,7 +2119,7 @@
 					"\"$(SRCROOT)/Bluefruit/External Tools/iOSMagick-6.8.8-9-libs/include\"",
 				);
 				INFOPLIST_FILE = Bluefruit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2154,11 +2158,12 @@
 					"\"iOSDFULibrary\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D MQTT_ENABLED";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox;
 				PRODUCT_NAME = "Bluefruit Connect";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Bluefruit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2169,8 +2174,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bluefruit/Bluefruit.entitlements;
 				CURRENT_PROJECT_VERSION = 51;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2205,7 +2209,7 @@
 					"\"$(SRCROOT)/Bluefruit/External Tools/iOSMagick-6.8.8-9-libs/include\"",
 				);
 				INFOPLIST_FILE = Bluefruit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2244,11 +2248,12 @@
 					"\"iOSDFULibrary\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D MQTT_ENABLED";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox;
 				PRODUCT_NAME = "Bluefruit Connect";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Bluefruit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2257,7 +2262,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CURRENT_PROJECT_VERSION = 51;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				INFOPLIST_FILE = "Bluefruit/Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2265,7 +2270,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2280,7 +2285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CURRENT_PROJECT_VERSION = 51;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				INFOPLIST_FILE = "Bluefruit/Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2288,7 +2293,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 3.6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2304,11 +2309,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 51;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				IBSC_MODULE = Bluefruit_Extension;
 				INFOPLIST_FILE = Bluefruit/Watch/Info.plist;
 				MARKETING_VERSION = 3.6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2325,11 +2330,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 51;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = R3C53H8NAJ;
 				IBSC_MODULE = Bluefruit_Extension;
 				INFOPLIST_FILE = Bluefruit/Watch/Info.plist;
 				MARKETING_VERSION = 3.6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihir.talkbox.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

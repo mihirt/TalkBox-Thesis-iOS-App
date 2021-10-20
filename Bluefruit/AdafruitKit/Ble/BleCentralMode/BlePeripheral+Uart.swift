@@ -182,7 +182,7 @@ extension BlePeripheral {
             }
             offset += packetSize
         } while offset < data.count
-        
+        print("sent3")
     }
     
     func uartSendEachPacketSequentially(data: Data?, withResponseEveryPacketCount: Int,  progress: ((Float)->Void)? = nil, completion: ((Error?) -> Void)? = nil) {

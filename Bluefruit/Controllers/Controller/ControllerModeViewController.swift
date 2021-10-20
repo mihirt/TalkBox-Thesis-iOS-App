@@ -21,6 +21,7 @@ class ControllerModeViewController: PeripheralModeViewController {
     private var controllerData: ControllerModuleManager!
     private var contentItems = [Int]()
     private weak var controllerPadViewController: ControllerPadViewController?
+    private weak var talkBoxViewController: TalkBoxViewController?
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -197,6 +198,32 @@ class ControllerModeViewController: PeripheralModeViewController {
             controllerData.sendCrcData(data)
         }
     }
+    
+    func sendSaveEvent(enableDict: [Int:Bool]) {
+//        var data = Data()
+        var totalString = "!S"
+//        controllerData.sendCrcData(totalString.data(using: String.Encoding.utf8)!)
+//        let prefixData = prefix.data(using: String.Encoding.utf8)!
+//        data.append(prefixData)
+        for (num,enable) in enableDict {
+            var encodedEnable = "F"
+            if (enable) {
+                encodedEnable = "T"
+            }
+            var saveString = "\(num),\(encodedEnable);"
+            saveString = totalString + saveString
+            controllerData.sendCrcData(saveString.data(using: String.Encoding.utf8)!)
+        }
+//        if let data = totalString.data(using: String.Encoding.utf8) {
+//            print(data)
+//            print(String(decoding: data, as: UTF8.self))
+//    //        var newData = Data()
+//    //        newData.append(prefixData)
+////            controllerData.sendCrcData(data)
+//        }
+////        let message = "!B\(tag)\(isPressed ? "1" : "0")"
+        
+    }
 }
 
 // MARK: - ControllerColorWheelViewControllerDelegate
@@ -213,10 +240,18 @@ extension ControllerModeViewController: ControllerPadViewControllerDelegate {
     }
 }
 
+extension ControllerModeViewController: TalkBoxViewControllerDelegate {
+    func onSendTalkBoxButtonStatus(tag: Int, isPressed: Bool) {
+        sendTouchEvent(tag: tag, isPressed: isPressed)
+    }
+    func onSendTalkBoxSave(enableDict: [Int:Bool]) {
+        sendSaveEvent(enableDict: enableDict)
+    }
+}
 // MARK: - UITableViewDataSource
 extension ControllerModeViewController : UITableViewDataSource {
     private static let kSensorTitleKeys: [String] = ["controller_sensor_quaternion", "controller_sensor_accelerometer", "controller_sensor_gyro", "controller_sensor_magnetometer", "controller_sensor_location"]
-    private static let kModuleTitleKeys: [String] = ["controller_module_pad", "controller_module_colorpicker"]
+    private static let kModuleTitleKeys: [String] = ["controller_module_pad", "controller_module_colorpicker", "talk_box_configure"]
     
     enum ControllerSection: Int {
         case sensorData = 0
@@ -377,10 +412,20 @@ extension ControllerModeViewController: UITableViewDelegate {
                     controllerData.uartRxCacheReset()
                     controllerData.isUartRxCacheEnabled = true
                 }
-            } else {
+            } else if indexPath.row == 1 {
                 if let viewController = storyboard!.instantiateViewController(withIdentifier: "ControllerColorWheelViewController") as? ControllerColorWheelViewController {
                     viewController.delegate = self
                     navigationController?.show(viewController, sender: self)
+                }
+            } else {
+                if let viewController = storyboard!.instantiateViewController(withIdentifier: "TalkBoxViewController") as? TalkBoxViewController {
+                    talkBoxViewController = viewController
+                    viewController.delegate = self
+                    navigationController?.show(viewController, sender: self)
+
+                    // Enable cache for control pad
+                    controllerData.uartRxCacheReset()
+                    controllerData.isUartRxCacheEnabled = true
                 }
             }
         default:
@@ -418,7 +463,7 @@ extension ControllerModeViewController: ControllerModuleManagerDelegate {
         // Uart data recevied
 
         // Only reloadData when controllerPadViewController is loaded
-        guard controllerPadViewController != nil else { return }
+        guard (talkBoxViewController != nil || controllerPadViewController != nil) else { return }
 
         self.enh_throttledReloadData()      // it will call self.reloadData without overloading the main thread with calls
     }
@@ -426,6 +471,7 @@ extension ControllerModeViewController: ControllerModuleManagerDelegate {
     @objc func reloadData() {
         // Refresh the controllerPadViewController uart text
         self.controllerPadViewController?.setUartText(self.controllerData.uartTextBuffer())
+        self.talkBoxViewController?.setUartText(self.controllerData.uartTextBuffer())
 
     }
 }

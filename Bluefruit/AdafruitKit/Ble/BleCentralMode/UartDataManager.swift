@@ -81,9 +81,13 @@ class UartDataManager {
 
     // MARK: - Send data
     func send(blePeripheral: BlePeripheral, data: Data?, completion: ((Error?) -> Void)? = nil) {
-        blePeripheral.uartSend(data: data, completion: completion)
+        print("sent2")
+        blePeripheral.uartSend(data: data, progress: printProgress, completion: completion)
     }
 
+    func printProgress(prog: Float) {
+        print(prog)
+    }
     
     // MARK: - Received data
     func rxDataReceived(data: Data?, peripheralIdentifier identifier: UUID, error: Error?) {

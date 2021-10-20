@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.adafruit.bluefruitconnect</string>
+	<string>com.mihir.talkbox</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
