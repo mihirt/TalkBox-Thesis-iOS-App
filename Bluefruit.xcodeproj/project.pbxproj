@@ -218,6 +218,7 @@
 		A9D2342E1E3AD64500DC0C99 /* GattUUIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9D234251E3AD64500DC0C99 /* GattUUIDs.plist */; };
 		A9D2344D1E3AD97600DC0C99 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2344C1E3AD97600DC0C99 /* StyleConfig.swift */; };
 		A9F4E1BD1F04467200BF8A70 /* ISColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BB9250B4275C5F5800B930D3 /* WordChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9250B3275C5F5800B930D3 /* WordChoiceViewController.swift */; };
 		BBB968B727172DE100218CA1 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB968B627172DE100218CA1 /* libxml2.2.tbd */; };
 		BBB968CE2717CD9D00218CA1 /* TalkBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */; };
 /* End PBXBuildFile section */
@@ -619,6 +620,7 @@
 		A9D2344C1E3AD97600DC0C99 /* StyleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		A9F4E1BA1F04467200BF8A70 /* ISColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISColorWheel.h; sourceTree = "<group>"; };
 		A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISColorWheel.m; sourceTree = "<group>"; };
+		BB9250B3275C5F5800B930D3 /* WordChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordChoiceViewController.swift; sourceTree = "<group>"; };
 		BBB968B627172DE100218CA1 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkBoxViewController.swift; sourceTree = "<group>"; };
 		DE511F22E8F88E565DA29F57 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1264,6 +1266,7 @@
 			children = (
 				A9B06A2423D0D0750060A64C /* ControllerPadViewController.swift */,
 				BBB968CD2717CD9D00218CA1 /* TalkBoxViewController.swift */,
+				BB9250B3275C5F5800B930D3 /* WordChoiceViewController.swift */,
 				A9B06A2523D0D0750060A64C /* ControllerSensorTableViewCell.swift */,
 				A9B06A2623D0D0750060A64C /* ControllerColorWheelViewController.swift */,
 				A9B06A2723D0D0750060A64C /* ControllerComponentsTableViewCell.swift */,
@@ -1783,6 +1786,7 @@
 				A9B06A6C23D0D0750060A64C /* VisualizationViewController.swift in Sources */,
 				A93DE76F1F36195900B2EB5D /* UartLogManager.swift in Sources */,
 				A9BCD5741E4D25B3003D1CEA /* FirmwareUpdater.swift in Sources */,
+				BB9250B4275C5F5800B930D3 /* WordChoiceViewController.swift in Sources */,
 				A9B06A7823D0D0750060A64C /* GyroscopeProgressViewController.swift in Sources */,
 				A969466C1E3CD0CC00BA8DAA /* IntrinsicSizeWithInsetsButton.swift in Sources */,
 				A98378721E43479400170319 /* ControllerModuleManager.swift in Sources */,

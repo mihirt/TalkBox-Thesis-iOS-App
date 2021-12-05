@@ -22,6 +22,7 @@ class ControllerModeViewController: PeripheralModeViewController {
     private var contentItems = [Int]()
     private weak var controllerPadViewController: ControllerPadViewController?
     private weak var talkBoxViewController: TalkBoxViewController?
+    private weak var wordAssignmentsViewController: WordAssignmentsViewController?
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -248,10 +249,19 @@ extension ControllerModeViewController: TalkBoxViewControllerDelegate {
         sendSaveEvent(enableDict: enableDict)
     }
 }
+
+extension ControllerModeViewController: WordAssignmentsViewControllerDelegate {
+    func onSendWordButtonStatus(tag: Int, isPressed: Bool) {
+        sendTouchEvent(tag: tag, isPressed: isPressed)
+    }
+    func onSendWordSave(enableDict: [Int:Bool]) {
+        sendSaveEvent(enableDict: enableDict)
+    }
+}
 // MARK: - UITableViewDataSource
 extension ControllerModeViewController : UITableViewDataSource {
     private static let kSensorTitleKeys: [String] = ["controller_sensor_quaternion", "controller_sensor_accelerometer", "controller_sensor_gyro", "controller_sensor_magnetometer", "controller_sensor_location"]
-    private static let kModuleTitleKeys: [String] = ["controller_module_pad", "controller_module_colorpicker", "talk_box_configure"]
+    private static let kModuleTitleKeys: [String] = ["controller_module_pad", "controller_module_colorpicker", "talk_box_configure", "word_assignments"]
     
     enum ControllerSection: Int {
         case sensorData = 0
@@ -417,9 +427,20 @@ extension ControllerModeViewController: UITableViewDelegate {
                     viewController.delegate = self
                     navigationController?.show(viewController, sender: self)
                 }
-            } else {
+            } else if indexPath.row == 2 {
                 if let viewController = storyboard!.instantiateViewController(withIdentifier: "TalkBoxViewController") as? TalkBoxViewController {
                     talkBoxViewController = viewController
+                    viewController.delegate = self
+                    navigationController?.show(viewController, sender: self)
+
+                    // Enable cache for control pad
+                    controllerData.uartRxCacheReset()
+                    controllerData.isUartRxCacheEnabled = true
+                }
+            }
+            else if indexPath.row == 3 {
+                if let viewController = storyboard!.instantiateViewController(withIdentifier: "WordAssignmentsViewController") as? WordAssignmentsViewController {
+                    wordAssignmentsViewController = viewController
                     viewController.delegate = self
                     navigationController?.show(viewController, sender: self)
 

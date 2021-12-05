@@ -1,38 +1,46 @@
 //
-//  TalkBoxViewController.swift
-//  Bluefruit Connect
+//  WordChoiceViewController.swift
+//  Bluefruit
 //
-//  Created by Mihir Trivedi on 10/10/21.
+//  Created by Mihir Trivedi on 12/4/21.
+//  Copyright © 2021 Adafruit. All rights reserved.
 //
 
 import UIKit
 
-protocol TalkBoxViewControllerDelegate: class {
-    func onSendTalkBoxButtonStatus(tag: Int, isPressed: Bool)
-    func onSendTalkBoxSave(enableDict: [Int:Bool])
+protocol WordAssignmentsViewControllerDelegate: class {
+    func onSendWordButtonStatus(tag: Int, isPressed: Bool)
+    func onSendWordSave(enableDict: [Int:Bool])
 }
 
-class TalkBoxViewController: UIViewController {
+class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // UI
 //    @IBOutlet weak var directionsView: UIView!
-    @IBOutlet weak var numbersView: UIView!
+
     @IBOutlet weak var uartTextView: UITextView!
-    @IBOutlet weak var uartView: UIView!
-    @IBOutlet weak var saveButton: UIButton!
-    //    @IBOutlet weak var volumeSlider: UISlider!
     
-    var buttonStates: [Int : Bool] = [:]
+    @IBOutlet weak var uartView: UIView!
+    @IBOutlet weak var button_number_selector: UIPickerView!
+    
+    @IBOutlet weak var word_picker: UIPickerView!
     
     // Data
-    weak var delegate: TalkBoxViewControllerDelegate?
+    weak var delegate: WordAssignmentsViewControllerDelegate?
 
+    @IBOutlet weak var saveButton2: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // UI
         uartView.layer.cornerRadius = 4
         uartView.layer.masksToBounds = true
+        
+        word_picker!.delegate = self
+        word_picker!.dataSource = self
+        
+        button_number_selector!.delegate = self
+        button_number_selector!.dataSource = self
         
         // Setup buttons targets
 //        for subview in directionsView.subviews {
@@ -41,11 +49,6 @@ class TalkBoxViewController: UIViewController {
 //            }
 //        }
 
-        for subview in numbersView.subviews {
-            if let button = subview as? UIButton {
-                setupButton(button)
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +70,36 @@ class TalkBoxViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    
+    //MARK: - Pickers
+    var button_number_choices = [1,2,3,4,5,6,7,8]
+    var word_choices = ["more","next","yes","no","slow","music","bathroom","fast","all done","TV","swing","outside","mom","dad","sister","brother","hurt ","play","tired","sleep", "drink", "help", "hug", "hungry", "pause", "play", "skip", "walk"]
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
+            return 1
+        }
+
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        if pickerView == word_picker {
+            return word_choices.count
+        } else {
+            return button_number_choices.count
+        }
+        
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == word_picker {
+            return String(word_choices[row])
+        } else {
+            return String(button_number_choices[row])
+        }
+        
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        self.textBox.text = self.list[row]
+//        self.word_picker.isHidden = true
+    }
 
     // MARK: - UI
     private func setupButton(_ button: UIButton) {
@@ -87,7 +120,7 @@ class TalkBoxViewController: UIViewController {
         button.addTarget(self, action: #selector(onTouchUp(_:)), for: .touchUpInside)
         button.addTarget(self, action: #selector(onTouchUp(_:)), for: .touchDragExit)
         button.addTarget(self, action: #selector(onTouchUp(_:)), for: .touchCancel)
-        buttonStates[button.tag] = true
+//        buttonStates[button.tag] = true
     }
 
     func setUartText(_ text: String) {
@@ -119,29 +152,29 @@ class TalkBoxViewController: UIViewController {
     }
 
     @objc func onTouchUp(_ sender: UIButton) {
-        sendTouchEvent(tag: sender.tag, isPressed: false)
-        buttonStates[sender.tag] = !buttonStates[sender.tag]!
-        let disabledImage = UIImage(color: UIColor.darkGray)
-        let enabledImage = UIImage(color: UIColor(red: 25/255, green: 126/255, blue: 248/255, alpha: 1.0))
-        if (buttonStates[sender.tag]!) {
-            sender.setBackgroundImage(enabledImage, for: .normal)
-        } else {
-            sender.setBackgroundImage(disabledImage, for: .normal)
-        }
+//        sendTouchEvent(tag: sender.tag, isPressed: false)
+//        buttonStates[sender.tag] = !buttonStates[sender.tag]!
+//        let disabledImage = UIImage(color: UIColor.darkGray)
+//        let enabledImage = UIImage(color: UIColor(red: 25/255, green: 126/255, blue: 248/255, alpha: 1.0))
+//        if (buttonStates[sender.tag]!) {
+//            sender.setBackgroundImage(enabledImage, for: .normal)
+//        } else {
+//            sender.setBackgroundImage(disabledImage, for: .normal)
+//        }
         
 //        print(buttonStates[sender.tag])
     }
 
     private func sendTouchEvent(tag: Int, isPressed: Bool) {
         if let delegate = delegate {
-            delegate.onSendTalkBoxButtonStatus(tag: tag, isPressed: isPressed)
+            delegate.onSendWordButtonStatus(tag: tag, isPressed: isPressed)
         }
     }
     
     @IBAction func saveClicked(_ sender: UIButton) {
-        if let delegate = delegate {
-            delegate.onSendTalkBoxSave(enableDict: buttonStates)
-        }
+//        if let delegate = delegate {
+//            delegate.onSendTalkBoxSave(enableDict: buttonStates)
+//        }
     }
     
     @IBAction func volumeChanged(_ sender: UISlider) {
