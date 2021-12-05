@@ -9,8 +9,8 @@
 import UIKit
 
 protocol WordAssignmentsViewControllerDelegate: class {
-    func onSendWordButtonStatus(tag: Int, isPressed: Bool)
-    func onSendWordSave(enableDict: [Int:Bool])
+//    func onSendWordButtonStatus(tag: Int, isPressed: Bool)
+    func onSendWordSave(assignment: (String, String))
 }
 
 class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -148,7 +148,7 @@ class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIP
     // MARK: - Actions
     @objc func onTouchDown(_ sender: UIButton) {
         print("touched", sender.tag);
-        sendTouchEvent(tag: sender.tag, isPressed: true)
+//        sendTouchEvent(tag: sender.tag, isPressed: true)
     }
 
     @objc func onTouchUp(_ sender: UIButton) {
@@ -165,13 +165,18 @@ class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIP
 //        print(buttonStates[sender.tag])
     }
 
-    private func sendTouchEvent(tag: Int, isPressed: Bool) {
-        if let delegate = delegate {
-            delegate.onSendWordButtonStatus(tag: tag, isPressed: isPressed)
-        }
-    }
+//    private func sendTouchEvent(tag: Int, isPressed: Bool) {
+//        if let delegate = delegate {
+//            delegate.onSendWordButtonStatus(tag: tag, isPressed: isPressed)
+//        }
+//    }
     
     @IBAction func saveClicked(_ sender: UIButton) {
+        let button_num = String(button_number_choices[button_number_selector.selectedRow(inComponent: 0)])
+        let word_choice = word_choices[word_picker.selectedRow(inComponent: 0)]
+        if let delegate = delegate {
+            delegate.onSendWordSave(assignment: (button_num, word_choice))
+        }
 //        if let delegate = delegate {
 //            delegate.onSendTalkBoxSave(enableDict: buttonStates)
 //        }

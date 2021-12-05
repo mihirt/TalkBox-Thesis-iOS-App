@@ -200,6 +200,14 @@ class ControllerModeViewController: PeripheralModeViewController {
         }
     }
     
+    func sendWordSaveEvent(assignments: (String,String)) {
+        print(assignments)
+        let wordSave = "!W"
+//        controllerData.sendCrcData(wordSave.data(using:String.Encoding.utf8)!)
+        let saveString = wordSave + assignments.0 +  assignments.1.padding(toLength: 10, withPad: " ", startingAt: 0)
+        controllerData.sendCrcData(saveString.data(using:String.Encoding.utf8)!)
+    }
+    
     func sendSaveEvent(enableDict: [Int:Bool]) {
 //        var data = Data()
         var totalString = "!S"
@@ -251,11 +259,8 @@ extension ControllerModeViewController: TalkBoxViewControllerDelegate {
 }
 
 extension ControllerModeViewController: WordAssignmentsViewControllerDelegate {
-    func onSendWordButtonStatus(tag: Int, isPressed: Bool) {
-        sendTouchEvent(tag: tag, isPressed: isPressed)
-    }
-    func onSendWordSave(enableDict: [Int:Bool]) {
-        sendSaveEvent(enableDict: enableDict)
+    func onSendWordSave(assignment assignments: (String, String)) {
+        sendWordSaveEvent(assignments: assignments)
     }
 }
 // MARK: - UITableViewDataSource
