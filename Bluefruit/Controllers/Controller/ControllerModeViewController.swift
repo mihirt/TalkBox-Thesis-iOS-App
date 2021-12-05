@@ -489,7 +489,7 @@ extension ControllerModeViewController: ControllerModuleManagerDelegate {
         // Uart data recevied
 
         // Only reloadData when controllerPadViewController is loaded
-        guard (talkBoxViewController != nil || controllerPadViewController != nil) else { return }
+        guard (talkBoxViewController != nil || controllerPadViewController != nil || wordAssignmentsViewController != nil) else { return }
 
         self.enh_throttledReloadData()      // it will call self.reloadData without overloading the main thread with calls
     }
@@ -498,6 +498,7 @@ extension ControllerModeViewController: ControllerModuleManagerDelegate {
         // Refresh the controllerPadViewController uart text
         self.controllerPadViewController?.setUartText(self.controllerData.uartTextBuffer())
         self.talkBoxViewController?.setUartText(self.controllerData.uartTextBuffer())
+        self.wordAssignmentsViewController?.setUartText(self.controllerData.uartTextBuffer())
 
     }
 }
