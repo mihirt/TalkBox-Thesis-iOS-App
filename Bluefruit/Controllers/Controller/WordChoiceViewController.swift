@@ -42,6 +42,7 @@ class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIP
         button_number_selector!.delegate = self
         button_number_selector!.dataSource = self
         
+        word_choices = word_choices.sorted { $0.lowercased() < $1.lowercased() }
         // Setup buttons targets
 //        for subview in directionsView.subviews {
 //            if let button = subview as? UIButton {
@@ -73,7 +74,8 @@ class WordAssignmentsViewController: UIViewController, UIPickerViewDelegate, UIP
     
     //MARK: - Pickers
     var button_number_choices = [1,2,3,4,5,6,7,8]
-    var word_choices = ["more","next","yes","no","slow","music","bathroom","fast","all done","TV","swing","outside","mom","dad","sister","brother","hurt ","play","tired","sleep", "drink", "help", "hug", "hungry", "pause", "play", "skip", "walk"]
+    var word_choices = Array(Set(["more","next","yes","no","slow","music","bathroom","fast","all done","TV","swing","outside","mom","dad","sister","brother","hurt ","play","tired","sleep", "drink", "help", "hug", "hungry", "pause", "play", "skip", "walk"]))
+    
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
             return 1
         }
